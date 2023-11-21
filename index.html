@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <script src="anime.min.js"></script>
+        <meta name="author" content="" />
+        <title>열역학 법칙의 시각적 확인-웹 프로젝트</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">열역학이란?</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section_zero">열역학 제 0법칙</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section_one">열역학 제 1법칙</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section_two">열역학 제 2법칙</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section_three">열역학 제 3법칙</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#developer">제작</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        열
+                        <span class="text-primary">역학</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        에너지의 변환과 흐름이 만들어내는 물리 현상에 대한 이해
+                    </div>
+                    <p class="lead mb-5">열역학은 열과 일 사이의 관계를 에너지의 흐름으로 설명하는 것으로,<br>기체 내부의 에너지, 온도, 부피, 압력 사이의 상호작용을 설명하며 하거나 받는 일에 대한 정보도 얻을 수 있다.</p>
+
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="section_zero">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">열역학 제 0법칙</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">열적 평형</h3>
+                            <div class="subheading mb-3">열은 평형을 이루는 방향으로 변화한다.</div>
+                            <p>서로 다른 열이 한 계에 존재할 때, 열은 서로 같아질 때까지 낮아지거나 높아지면서 변화한다.<br>이는 곧 에너지의 평형으로 이어지며, 모든 상태는 해당하는 계에 평형한다.</p>
+                        </div>
+                    </div>
+
+                    <!--이곳에 열적평형 애니메이션 삽입-->
+                    <div class="thermodynamics-animation">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="thermo-container">
+                                        <div class="thermo-box large" id="largeContainer">
+                                            <input type="number" id="tempLarge" placeholder="온도 입력">
+                                        </div>
+                                        <div class="thermo-box large" id="smallContainer">
+                                            <input type="number" id="tempSmall" placeholder="온도 입력">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary start-animation">평형 시작</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="section_one">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">열역학 제 1법칙</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">에너지 보존 법칙</h3>
+                            <div class="subheading mb-3">에너지는 어떤 상황에서도 보존된다.</div>
+                            <p>대상에게 외부에서 가해준 열량은 대상이 외부에 한 일과 대상의 내부 에너지 증가량의 값과 동일하다.</p>
+                        </div>
+                    </div>
+
+                    <!--이곳에 에너지 보존 법칙 애니메이션 삽입-->
+                    <br>
+                    <h3>열효율 기관 시뮬레이션</h3>
+                    <div id="container_111">
+                        <div id="inputHeat">입력 열</div>
+                        <div id="efficiency">열효율</div>
+                        <div id="outputHeat">남은 열</div>
+                    </div>
+                    <input type="number" id="heatInput" placeholder="입력 열량 (J)" />
+                    <input type="number" id="efficiencyInput" placeholder="열효율 (%)" />
+                    <button id="startEngine">열기관 작동</button>
+                
+                    <script>
+                        document.getElementById('startEngine').onclick = function() {
+                            var inputHeat = parseFloat(document.getElementById('heatInput').value);
+                            var efficiency = parseFloat(document.getElementById('efficiencyInput').value) / 100;
+                            var workDone = inputHeat * efficiency;
+                            var outputHeat = inputHeat - workDone;
+                
+                            document.getElementById('inputHeat').textContent = inputHeat + 'J';
+                            document.getElementById('outputHeat').textContent = outputHeat + 'J';
+                            document.getElementById('efficiency').textContent = (efficiency * 100) + '%';
+                
+                            // Change the color of the outputHeat element gradually
+                            var currentColorValue = 255;
+                            var intervalId = setInterval(function() {
+                                if (currentColorValue > 0) {
+                                    document.getElementById('outputHeat').style.backgroundColor = 'rgb(255,' + currentColorValue + ',' + currentColorValue + ')';
+                                    currentColorValue -= (255 * 10 / inputHeat);
+                                } else {
+                                    clearInterval(intervalId);
+                                }
+                            }, 50);
+                        };
+                    </script>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="section_two">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">열역학 제 2법칙</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">엔트로피 증가 법칙</h3>
+                            <div class="subheading mb-3">엔트로피는 증가한다.</div>
+                            <p>자연 현상은 엔트로피, 즉 무질서도가 증가하는 방향으로만 진행된다. <br>즉, 엔트로피가 증가한 상황, 즉 에너지가 '무용 에너지'가 된 상태에선 다시 엔트로피가 낮은 상태로 되돌릴 수 없다.</p>
+                        </div>
+                    </div>
+
+                    <!--이곳에 가역 비가역 법칙 애니메이션 삽입: 폐기-->
+                    <img src="assets/img/2_.jpg" alt="엔트로피 증가 법칙" width="60%">
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="section_three">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">열역학 제 3법칙</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">절대 온도 법칙</h3>
+                            <div class="subheading mb-3">절대온도에서 엔트로피는 정지한다.</div>
+                            <p>절대 0도에 가까워질수록 엔트로피의 변화량은 0에 가까워진다.<br>이 때 모든 원자의 움직임도 0에 수렴하게 된다.<br>에너지의 이동이 없어지므로 해당 계의 모든 에너지는 정지하며, 이로서 엔트로피의 '정지'가 성립된다.</p>
+                        </div>
+                    </div>
+
+                    <!--이곳에 절대 온도 법칙 애니메이션 삽입: 폐기-->
+                    <img src="assets/img/3_.jpg" alt="절대 온도 법칙" width="60%">
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="developer">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">프로젝트 참여자</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-atlas text-warning"></i></span>
+                            허 율 - 관련 자료 조사 및 정리, 설명 그림 제작
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-cogs text-warning"></i></span>
+                            권 진우(Sora) - 웹사이트 제작 및 배포
+                        </li>
+                        <br><br>
+
+                        <li>
+                            추가로 감사드리는 분<br>
+                            <span class="fa-li"><i class="far fa-calendar-check text-warning"></i></span>
+                            Robot3000 - 디자인 관련 자문
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
